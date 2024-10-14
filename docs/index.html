@@ -1,80 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site en construction pour Faya-IA, spécialisé dans la vente de leads et services automatisés.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
     <title>Faya-IA - En Construction</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers un fichier CSS externe -->
     <style>
         body {
             margin: 0;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            background-image: url('https://images.unsplash.com/photo-1491344691672-e2a2e3e9d0aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHwxfHx8fHx8fHwxNjE3MzkwNTQ0&ixlib=rb-1.2.1&q=80&w=1080');
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1517500162028-1682f6db3e8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHwxfHx8fHx8fHwxNjE3Mzg3NTA4&ixlib=rb-1.2.1&q=80&w=1080');
             background-size: cover;
             background-position: center;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
         }
 
         header {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(0, 0, 0, 0.8);
             padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin-bottom: 30px;
         }
 
-        header h1 {
+        h1 {
             font-size: 2.5em;
-            color: #007BFF;
             margin: 0;
         }
 
-        nav {
-            margin-top: 15px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            text-align: center;
-            margin: 50px auto;
-            width: 90%;
-            max-width: 800px;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-info {
-            margin-top: 20px;
+        h2 {
+            margin-top: 40px;
+            font-size: 1.8em;
         }
 
         form {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             margin-top: 20px;
+            display: inline-block;
+            width: 300px;
         }
 
-        input,
-        textarea {
-            width: 100%;
+        input, textarea {
+            width: calc(100% - 20px);
             padding: 10px;
             margin: 5px 0;
-            border: 1px solid #ccc;
+            border: none;
             border-radius: 5px;
         }
 
@@ -82,132 +57,75 @@
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            background-color: #007BFF;
+            background-color: #4CAF50;
             color: white;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #45a049;
         }
 
-        .testimonials {
-            margin: 40px auto;
-            width: 90%;
-            max-width: 800px;
-            background-color: rgba(255, 255, 255, 0.9);
+        .testimonials, .shop {
+            margin-top: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            width: calc(300px - 40px);
         }
 
-        .testimonial {
-            margin: 15px 0;
-            font-style: italic;
+        .testimonials p, .shop p {
+            margin: 10px 0;
         }
 
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 0.8em;
-            color: #777;
-        }
-
-        .shop {
-            margin: 40px auto;
-            width: 90%;
-            max-width: 800px;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .shop h2 {
-            margin-bottom: 20px;
-        }
-
-        .item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-
-        .item img {
-            width: 60px;
-            height: 60px;
+        .testimonial-image {
+            width: 100%;
+            height: auto; /* Assure que l'image est responsive */
             border-radius: 5px;
         }
 
-        .item p {
-            margin: 0;
-            padding-left: 10px;
-            flex: 1;
+        footer {
+            margin-top: 50px; 
+            padding-top: 20px; 
+            color: #ccc; 
         }
     </style>
 </head>
-
 <body>
     <header>
         <h1>Faya-IA</h1>
-        <nav>
-            <a href="#contact">Contact</a>
-            <a href="#shop">Boutique</a>
-            <a href="#testimonials">Témoignages</a>
-        </nav>
+        <p>Site en Construction</p>
     </header>
-    <div class="container">
-        <h2>Site en Construction</h2>
-        <p>Nous travaillons dur pour vous apporter nos services. Revenez bientôt !</p>
-        <p class="contact-info">Contactez-nous à : <a href="mailto:contact@faya-ia.store" style="color: #007BFF;">contact@faya-ia.store</a></p>
+    
+    <p>Nous travaillons dur pour vous apporter nos services. Revenez bientôt !</p>
+    
+    <p>Contactez-nous à : <a href="mailto:contact@faya-ia.store" style="color: lightblue;">contact@faya-ia.store</a></p>
 
-        <h2 id="contact">Formulaire de Contact</h2>
-        <form action="mailto:contact@faya-ia.store" method="POST" enctype="text/plain">
-            <input type="text" name="name" placeholder="Votre nom" required>
-            <input type="email" name="email" placeholder="Votre e-mail" required>
-            <textarea name="message" rows="4" placeholder="Votre message" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
+    <h2>Formulaire de Contact</h2>
+    <form action="votre_script_de_traitement.php" method="POST"> <!-- Action modifiée -->
+        <input type="text" name="name" placeholder="Votre nom" required aria-label="Nom">
+        <input type="email" name="email" placeholder="Votre e-mail" required aria-label="E-mail">
+        <textarea name="message" rows="4" placeholder="Votre message" required aria-label="Message"></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
 
-        <div class="testimonials" id="testimonials">
-            <h2>Témoignages</h2>
-            <div class="testimonial">"Un excellent service et des leads de qualité!" - Client Satisfait</div>
-            <div class="testimonial">"Faya-IA m'a aidé à développer mon entreprise!" - Entrepreneur Heureux</div>
-        </div>
-
-        <div class="shop" id="shop">
-            <h2>Boutique à Venir</h2>
-            <div class="item">
-                <img src="https://via.placeholder.com/60" alt="Article 1">
-                <p>Article 1 - Description</p>
-                <p>Prix: 10€</p>
-            </div>
-            <div class="item">
-                <img src="https://via.placeholder.com/60" alt="Article 2">
-                <p>Article 2 - Description</p>
-                <p>Prix: 15€</p>
-            </div>
-            <div class="item">
-                <img src="https://via.placeholder.com/60" alt="Article 3">
-                <p>Article 3 - Description</p>
-                <p>Prix: 20€</p>
-            </div>
-            <div class="item">
-                <img src="https://via.placeholder.com/60" alt="Article 4">
-                <p>Article 4 - Description</p>
-                <p>Prix: 25€</p>
-            </div>
-            <div class="item">
-                <img src="https://via.placeholder.com/60" alt="Article 5">
-                <p>Article 5 - Description</p>
-                <p>Prix: 30€</p>
-            </div>
-        </div>
+    <div class="testimonials">
+        <h2>Témoignages</h2>
+        <img src="https://images.unsplash.com/photo-1597390758786-b70049b9c843?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHw3fHx8fHx8fHwxNjE3Mzg4MDQw&ixlib=rb-1.2.1&q=80&w=400" alt="Client satisfait" class="testimonial-image" loading="lazy">
+        <p>"Des services exceptionnels, je recommande vivement !" - Client Satisfait</p>
+        
+        <img src="https://images.unsplash.com/photo-1597521494393-5452e3a0c504?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHw4fHx8fHx8fHwxNjE3Mzg4MDY4&ixlib=rb-1.2.1&q=80&w=400" alt="Client heureux" class="testimonial-image" loading="lazy">
+        <p>"Faya-IA a transformé notre façon de travailler !" - Client Heureux</p>
     </div>
+
+    <div class="shop">
+        <h2>Boutique à venir</h2>
+        <p>Nous proposerons bientôt des articles à vendre.</p>
+    </div>
+
     <footer>
         &copy; 2024 Faya-IA. Tous droits réservés.
     </footer>
 </body>
-
 </html>

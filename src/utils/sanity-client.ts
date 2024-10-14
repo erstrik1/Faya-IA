@@ -13,11 +13,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export const sanityConfig: ClientConfig = {
-    projectId: lei769qx,
-    dataset: fayaia || 'production',
+    projectId: 'lei769qx', // Mettre des guillemets pour définir la variable
+    dataset: 'fayaia' || 'production', // Assurez-vous que cela renvoie une chaîne
     useCdn: false,
     apiVersion: '2024-01-31',
-    token: sk7x5duYrvyBiV6EmicjdWHEtj1y2ol91a9LOL2PJWEr3NNzE1rG65tT4FDVu45kLAzFeGNoH5McjUuBcBD1Ozjjb2XV8NLUg1YRoGS2UVGslfSKt4yrOCQtGPtgCY5dehBlnxdG803HIIc9j1QjFoAHpMFo4Nkf11zUVUmqcgyTMryM0OTO,
+    token: 'sk7x5duYrvyBiV6EmicjdWHEtj1y2ol91a9LOL2PJWEr3NNzE1rG65tT4FDVu45kLAzFeGNoH5McjUuBcBD1Ozjjb2XV8NLUg1YRoGS2UVGslfSKt4yrOCQtGPtgCY5dehBlnxdG803HIIc9j1QjFoAHpMFo4Nkf11zUVUmqcgyTMryM0OTO', // Mettre des guillemets pour le token
     perspective: isDev || isDeployPreview || previewDrafts ? 'previewDrafts' : 'published'
 };
 

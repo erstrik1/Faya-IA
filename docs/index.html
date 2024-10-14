@@ -1,206 +1,159 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site en construction pour Faya-IA, spécialisé dans la vente de leads et services automatisés.">
-    <title>Faya-IA - En Construction</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Icônes Font Awesome -->
+    <title>Site en Construction - Faya IA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: 'Arial', sans-serif;
-            color: #fff;
-            background-image: url('https://images.unsplash.com/photo-1517500162028-1682f6db3e8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHwxfHx8fHx8fHwxNjE3Mzg3NTA4&ixlib=rb-1.2.1&q=80&w=1080');
-            background-size: cover;
-            background-position: center;
+            background-color: #f0f4f8; /* Couleur de fond douce */
+            color: #333; /* Couleur de texte principale */
             text-align: center;
-        }
-
-        header {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px auto;
-            max-width: 800px;
-            animation: fadeInDown 1s ease-in-out; /* Animation d'apparition */
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            font-family: Arial, sans-serif;
+            padding: 50px 0; /* Espacement autour du contenu */
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0056b3; /* Couleur bleue pour le titre */
         }
 
-        h2 {
-            margin-top: 40px;
-            font-size: 2em;
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
         }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 50px; /* Espacement en bas */
+        .card {
+            background-color: rgba(255, 255, 255, 0.9); /* Fond de carte blanc semi-transparent */
+            border-radius: 10px; /* Coins arrondis */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre légère */
+            margin: 0 auto; /* Centrer la carte */
+            max-width: 600px; /* Largeur maximum de la carte */
         }
 
-        form {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            width: 300px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        .btn-primary {
+            background-color: #007bff; /* Couleur du bouton */
+            border: none; /* Supprimer la bordure */
         }
 
-        input, textarea {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 10px; /* Espacement entre les champs */
+        .footer {
+            margin-top: 50px; /* Espacement en haut du pied de page */
+            font-size: 0.9rem;
+            color: #777; /* Couleur du texte du pied de page */
+        }
+
+        .form-control {
+            border-radius: 5px; /* Coins arrondis pour les champs de formulaire */
+        }
+
+        .form-group label {
+            font-weight: bold; /* Mettre en gras les étiquettes des champs */
+        }
+
+        .cookie-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
             border-radius: 5px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .cookie-popup button {
+            background-color: #007bff;
             border: none;
-        }
-
-        button {
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #4CAF50;
             color: white;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
+            padding: 5px 10px;
+            border-radius: 5px;
         }
-
-        button:hover {
-            background-color: #45a049;
-            transform: scale(1.05);
-        }
-
-        .testimonials-container {
-            position: relative; 
-            width: calc(300px - 40px); 
-            margin-top :40 px; 
-         }
-         
-         .testimonial {
-             display : none; 
-             text-align : center; 
-         }
-         
-         .active {
-             display : block; 
-         }
-         
-         .testimonial-image {
-             width : calc(100% - 20 px); 
-             height : auto; 
-             border-radius :5 px; 
-             box-shadow :0 px 4 px rgba(0 ,0 ,0 ,.5); 
-             transition : transform .3 s; 
-         }
-         
-         .testimonial-image:hover{
-             transform : scale(1.05); 
-         }
-         
-         footer {
-           margin-top :50 px; 
-           padding-top :20 px; 
-           color :#ccc; 
-           font-size :14 px; 
-       }
-
-       /* Responsive Design */
-       @media (max-width: 768px) {
-           header h1 {
-               font-size: 2em; /* Réduction de la taille du texte sur mobile */
-           }
-           form {
-               width :90 % ; /* Formulaire plus large sur mobile */
-           }
-       }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Faya-IA</h1>
-        <p>Site en Construction</p>
-    </header>
-    
-    <div class="container">
-        <p>Nous travaillons dur pour vous apporter nos services. Revenez bientôt !</p>
-        
-        <p>Contactez-nous à : <a href="mailto:contact@faya-ia.store" style="color:#4CAF50;">contact@faya-ia.store</a></p>
 
-        <h2>Formulaire de Contact</h2>
-        
-        <form action="votre_script_de_traitement.php" method="POST">
-             <input type="text" name="name" placeholder="Votre nom" required aria-label="Nom">
-             <input type="email" name="email" placeholder="Votre e-mail" required aria-label="E-mail">
-             <textarea name="message" rows="4" placeholder="Votre message" required aria-label="Message"></textarea>
-             <button type="submit">Envoyer</button>
-         </form>
+    <h1>Site en Construction</h1>
+    <p>Nous travaillons dur pour vous apporter nos services. Revenez bientôt !</p>
+    <p>Contactez-nous à : <a href="mailto:contact@faya-ia.store" style="color: #007bff;">contact@faya-ia.store</a></p>
 
-         <div class="testimonials-container">
-             <h2>Témoignages</h2>
-             
-             <div class="testimonial active">
-                 <img src="https://images.unsplash.com/photo-1597390758786-b70049b9c843?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHw3fHx8fHx8fHwxNjE3Mzg4MDQw&ixlib=rb-1.2.1&q=80&w=400" alt="Client satisfait" class="testimonial-image" loading="lazy">
-                 <p>"Des services exceptionnels, je recommande vivement !" - Client Satisfait</p>
-             </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">À propos de Faya IA</h5>
+            <p>Chez Faya IA, nous proposons des solutions innovantes pour vos besoins en intelligence artificielle.</p>
+            <p>Nous sommes spécialisés dans la création de bots performants, de scripts Python et bien plus encore.</p>
+            <h6>Services Offerts :</h6>
+            <ul>
+                <li>Développement de bots personnalisés pour automatiser vos tâches.</li>
+                <li>Création de scripts Python pour des solutions sur mesure.</li>
+                <li>Ventes de produits numériques et services d'assistance technique.</li>
+                <li>Consultation en optimisation des processus d'affaires grâce à l'IA.</li>
+            </ul>
+        </div>
+    </div>
 
-             <div class="testimonial">
-                 <img src="https://images.unsplash.com/photo-1597521494393-5452e3a0c504?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHw4fHx8fHx8fHwxNjE3Mzg4MDY4&ixlib=rb-1.2.1&q=80&w=400" alt="Client heureux" class="testimonial-image" loading="lazy">
-                 <p>"Faya-IA a transformé notre façon de travailler !" - Client Heureux</p>
-             </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Description de notre Gig</h5>
+            <p>Notre objectif est de vous fournir des solutions qui améliorent l'efficacité et la productivité de votre entreprise.</p>
+            <p>Nos bots peuvent gérer des tâches répétitives, tandis que nos scripts Python peuvent automatiser des processus complexes.</p>
+            <h6>À venir :</h6>
+            <p>Nous prévoyons d'ouvrir une boutique en ligne avec une sélection de 5 à 6 articles à vendre. Restez à l'écoute !</p>
+        </div>
+    </div>
 
-             <!-- Ajoutez d'autres témoignages ici si nécessaire -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Témoignages de Clients Satisfaits</h5>
+            <p>"Faya IA a transformé notre façon de travailler grâce à leurs bots !" - Client Satisfait</p>
+            <p>"Leur support technique est inégalé !" - Client Heureux</p>
+        </div>
+    </div>
 
-             <!-- Boutons de navigation -->
-             <button id="prevBtn">&#10094;</button>
-             <button id="nextBtn">&#10095;</button>
-         </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Formulaire de Contact</h5>
+            <form>
+                <div class="form-group">
+                    <label for="name">Votre nom</label>
+                    <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Votre e-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="Entrez votre e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Écrivez votre message ici..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+    </div>
 
-         <div class="shop">
-             <h2>Boutique à venir</h2>
-             <p>Nous proposerons bientôt des articles à vendre.</p>
-         </div>
+    <div class="footer">
+        <p>© 2024 Faya IA. Tous droits réservés.</p>
+    </div>
 
-         <footer>
-             &copy; 2024 Faya-IA. Tous droits réservés.
-         </footer>
-     </div>
+    <!-- Pop-up Cookies -->
+    <div class="cookie-popup" id="cookiePopup">
+        <p>Ce site utilise des cookies pour améliorer votre expérience. <button id="acceptCookies">Accepter</button></p>
+    </div>
 
-     <!-- JavaScript pour le carrousel des témoignages -->
-     <script>
-         let currentIndex = 0;
+    <script>
+        // Gestion du pop-up cookies
+        document.getElementById('acceptCookies').onclick = function() {
+            document.getElementById('cookiePopup').style.display = 'none';
+        };
+    </script>
 
-         const testimonials = document.querySelectorAll('.testimonial');
-         const totalTestimonials = testimonials.length;
-
-         function showTestimonial(index) {
-             testimonials.forEach((testimonial, i) => {
-                 testimonial.classList.toggle('active', i === index);
-             });
-         }
-
-         document.getElementById('nextBtn').addEventListener('click', () => {
-             currentIndex = (currentIndex + 1) % totalTestimonials; // Passer au prochain témoignage
-             showTestimonial(currentIndex);
-         });
-
-         document.getElementById('prevBtn').addEventListener('click', () => {
-             currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials; // Retourner au précédent
-             showTestimonial(currentIndex);
-         });
-     </script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

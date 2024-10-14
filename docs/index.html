@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site en construction pour Faya-IA, spécialisé dans la vente de leads et services automatisés.">
     <title>Faya-IA - En Construction</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Lien vers un fichier CSS externe -->
     <style>
         body {
             margin: 0;
@@ -16,24 +15,36 @@
             color: white;
             font-family: 'Arial', sans-serif;
             text-align: center;
-            padding: 50px;
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.9);
             padding: 20px;
             border-radius: 10px;
-            margin-bottom: 30px;
+            margin: 20px auto;
+            max-width: 800px;
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin: 0;
+            animation: fadeIn 1s ease-in-out;
         }
 
         h2 {
             margin-top: 40px;
-            font-size: 1.8em;
+            font-size: 2em;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         form {
@@ -41,8 +52,8 @@
             padding: 20px;
             border-radius: 10px;
             margin-top: 20px;
-            display: inline-block;
             width: 300px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
 
         input, textarea {
@@ -60,10 +71,12 @@
             background-color: #4CAF50;
             color: white;
             cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
         }
 
         button:hover {
             background-color: #45a049;
+            transform: scale(1.05);
         }
 
         .testimonials, .shop {
@@ -76,20 +89,27 @@
         }
 
         .testimonials p, .shop p {
-            margin: 10px 0;
+            margin: 10px auto; 
         }
 
         .testimonial-image {
-            width: 100%;
-            height: auto; /* Assure que l'image est responsive */
-            border-radius: 5px;
-        }
+            width: calc(100% - 20px);
+            height:auto; 
+           border-radius:5px; 
+           box-shadow :0px 4px 15px rgba(0,0,0,.5); 
+           transition : transform .3s; 
+       }
+       
+       .testimonial-image:hover{
+           transform : scale(1.05); 
+       }
 
         footer {
-            margin-top: 50px; 
-            padding-top: 20px; 
-            color: #ccc; 
-        }
+           margin-top :50 px; 
+           padding-top :20 px; 
+           color :#ccc; 
+           font-size :14 px; 
+       }
     </style>
 </head>
 <body>
@@ -98,34 +118,38 @@
         <p>Site en Construction</p>
     </header>
     
-    <p>Nous travaillons dur pour vous apporter nos services. Revenez bientôt !</p>
-    
-    <p>Contactez-nous à : <a href="mailto:contact@faya-ia.store" style="color: lightblue;">contact@faya-ia.store</a></p>
-
-    <h2>Formulaire de Contact</h2>
-    <form action="votre_script_de_traitement.php" method="POST"> <!-- Action modifiée -->
-        <input type="text" name="name" placeholder="Votre nom" required aria-label="Nom">
-        <input type="email" name="email" placeholder="Votre e-mail" required aria-label="E-mail">
-        <textarea name="message" rows="4" placeholder="Votre message" required aria-label="Message"></textarea>
-        <button type="submit">Envoyer</button>
-    </form>
-
-    <div class="testimonials">
-        <h2>Témoignages</h2>
-        <img src="https://images.unsplash.com/photo-1597390758786-b70049b9c843?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHw3fHx8fHx8fHwxNjE3Mzg4MDQw&ixlib=rb-1.2.1&q=80&w=400" alt="Client satisfait" class="testimonial-image" loading="lazy">
-        <p>"Des services exceptionnels, je recommande vivement !" - Client Satisfait</p>
+    <div class="container">
+        <p>Nous travaillons dur pour vous apporter nos services. Revenez bientôt !</p>
         
-        <img src="https://images.unsplash.com/photo-1597521494393-5452e3a0c504?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHw4fHx8fHx8fHwxNjE3Mzg4MDY4&ixlib=rb-1.2.1&q=80&w=400" alt="Client heureux" class="testimonial-image" loading="lazy">
-        <p>"Faya-IA a transformé notre façon de travailler !" - Client Heureux</p>
-    </div>
+        <p>Contactez-nous à : <a href="mailto:contact@faya-ia.store" style="color: lightblue;">contact@faya-ia.store</a></p>
 
-    <div class="shop">
-        <h2>Boutique à venir</h2>
-        <p>Nous proposerons bientôt des articles à vendre.</p>
-    </div>
+        <h2>Formulaire de Contact</h2>
+        
+        <form action="votre_script_de_traitement.php" method="POST">
+             <input type="text" name="name" placeholder="Votre nom" required aria-label="Nom">
+             <input type="email" name="email" placeholder="Votre e-mail" required aria-label="E-mail">
+             <textarea name="message" rows="4" placeholder="Votre message" required aria-label="Message"></textarea>
+             <button type="submit">Envoyer</button>
+         </form>
 
-    <footer>
-        &copy; 2024 Faya-IA. Tous droits réservés.
-    </footer>
+         <div class="testimonials">
+             <h2>Témoignages</h2>
+             <img src="https://images.unsplash.com/photo-1597390758786-b70049b9c843?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHw3fHx8fHx8fHwxNjE3Mzg4MDQw&ixlib=rb-1.2.1&q=80&w=400" alt="Client satisfait" class="testimonial-image" loading="lazy">
+             <p>"Des services exceptionnels, je recommande vivement !" - Client Satisfait</p>
+             
+             <img src="https://images.unsplash.com/photo-1597521494393-5452e3a0c504?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHw4fHx8fHx8fHwxNjE3Mzg4MDY4&ixlib=rb-1.2.1&q=80&w=400" alt="Client heureux" class="testimonial-image" loading="lazy">
+             <p>"Faya-IA a transformé notre façon de travailler !" - Client Heureux</p>
+         </div>
+
+         <div class="shop">
+             <h2>Boutique à venir</h2>
+             <p>Nous proposerons bientôt des articles à vendre.</p>
+         </div>
+
+         <footer>
+             &copy; 2024 Faya-IA. Tous droits réservés.
+         </footer>
+     </div>
+
 </body>
 </html>

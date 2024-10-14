@@ -13,11 +13,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export const sanityConfig: ClientConfig = {
-    projectId: FayaID,
-    dataset: SANITY_DATASET || 'production',
+    projectId: lei769qx,
+    dataset: fayaia || 'production',
     useCdn: false,
     apiVersion: '2024-01-31',
-    token: SANITY_TOKEN,
+    token: sk7x5duYrvyBiV6EmicjdWHEtj1y2ol91a9LOL2PJWEr3NNzE1rG65tT4FDVu45kLAzFeGNoH5McjUuBcBD1Ozjjb2XV8NLUg1YRoGS2UVGslfSKt4yrOCQtGPtgCY5dehBlnxdG803HIIc9j1QjFoAHpMFo4Nkf11zUVUmqcgyTMryM0OTO,
     perspective: isDev || isDeployPreview || previewDrafts ? 'previewDrafts' : 'published'
 };
 

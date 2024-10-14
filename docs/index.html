@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site en construction pour Faya-IA, spécialisé dans la vente de leads et services automatisés.">
     <title>Faya-IA - En Construction</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers un fichier CSS externe -->
     <style>
         body {
             margin: 0;
@@ -80,7 +81,7 @@
 
         .testimonial-image {
             width: 100%;
-            height: auto;
+            height: auto; /* Assure que l'image est responsive */
             border-radius: 5px;
         }
     </style>
@@ -94,18 +95,19 @@
     <p>Contactez-nous à : <a href="mailto:contact@faya-ia.store" style="color: lightblue;">contact@faya-ia.store</a></p>
 
     <h2>Formulaire de Contact</h2>
-    <form action="mailto:contact@faya-ia.store" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Votre nom" required>
-        <input type="email" name="email" placeholder="Votre e-mail" required>
-        <textarea name="message" rows="4" placeholder="Votre message" required></textarea>
+    <form action="votre_script_de_traitement.php" method="POST"> <!-- Action modifiée -->
+        <input type="text" name="name" placeholder="Votre nom" required aria-label="Nom">
+        <input type="email" name="email" placeholder="Votre e-mail" required aria-label="E-mail">
+        <textarea name="message" rows="4" placeholder="Votre message" required aria-label="Message"></textarea>
         <button type="submit">Envoyer</button>
     </form>
 
     <div class="testimonials">
         <h2>Témoignages</h2>
-        <img src="https://images.unsplash.com/photo-1597390758786-b70049b9c843?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHw3fHx8fHx8fHwxNjE3Mzg4MDQw&ixlib=rb-1.2.1&q=80&w=400" alt="Client satisfait" class="testimonial-image">
+        <img src="https://images.unsplash.com/photo-1597390758786-b70049b9c843?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHw3fHx8fHx8fHwxNjE3Mzg4MDQw&ixlib=rb-1.2.1&q=80&w=400" alt="Client satisfait" class="testimonial-image" loading="lazy"> <!-- Lazy loading ajouté -->
         <p>"Des services exceptionnels, je recommande vivement !" - Client Satisfait</p>
-        <img src="https://images.unsplash.com/photo-1597521494393-5452e3a0c504?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHw4fHx8fHx8fHwxNjE3Mzg4MDY4&ixlib=rb-1.2.1&q=80&w=400" alt="Client heureux" class="testimonial-image">
+        
+        <img src="https://images.unsplash.com/photo-1597521494393-5452e3a0c504?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHw4fHx8fHx8fHwxNjE3Mzg4MDY4&ixlib=rb-1.2.1&q=80&w=400" alt="Client heureux" class="testimonial-image" loading="lazy"> <!-- Lazy loading ajouté -->
         <p>"Faya-IA a transformé notre façon de travailler !" - Client Heureux</p>
     </div>
 

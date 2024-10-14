@@ -5,30 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site en construction pour Faya-IA, spécialisé dans la vente de leads et services automatisés.">
     <title>Faya-IA - En Construction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Icones Font Awesome -->
     <style>
-        body {
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff;
             background-image: url('https://images.unsplash.com/photo-1517500162028-1682f6db3e8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzN8MHwxfGFsbHwxfHx8fHx8fHwxNjE3Mzg3NTA4&ixlib=rb-1.2.1&q=80&w=1080');
             background-size: cover;
             background-position: center;
-            color: white;
-            font-family: 'Arial', sans-serif;
             text-align: center;
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
             margin: 20px auto;
             max-width: 800px;
+            animation: fadeInDown 1s ease-in-out; /* Animation d'apparition */
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
             font-size: 3em;
-            margin: 0;
-            animation: fadeIn 1s ease-in-out;
         }
 
         h2 {
@@ -36,19 +45,15 @@
             font-size: 2em;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding-bottom: 50px; /* Espacement en bas */
         }
 
         form {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
             margin-top: 20px;
@@ -59,14 +64,13 @@
         input, textarea {
             width: calc(100% - 20px);
             padding: 10px;
-            margin: 5px 0;
-            border: none;
+            margin-bottom: 10px; /* Espacement entre les champs */
             border-radius: 5px;
+            border: none;
         }
 
         button {
-            padding: 10px 20px;
-            border: none;
+            padding: 10px;
             border-radius: 5px;
             background-color: #4CAF50;
             color: white;
@@ -88,27 +92,33 @@
             width: calc(300px - 40px);
         }
 
-        .testimonials p, .shop p {
-            margin: 10px auto; 
-        }
-
         .testimonial-image {
-            width: calc(100% - 20px);
-            height:auto; 
-           border-radius:5px; 
-           box-shadow :0px 4px 15px rgba(0,0,0,.5); 
-           transition : transform .3s; 
+           width : calc(100% - 20 px); 
+           height : auto; 
+           border-radius :5 px; 
+           box-shadow :0 px 4 px rgba(0 ,0 ,0 ,.5); 
+           transition : transform .3 s; 
        }
        
        .testimonial-image:hover{
            transform : scale(1.05); 
        }
 
-        footer {
+       footer {
            margin-top :50 px; 
            padding-top :20 px; 
            color :#ccc; 
            font-size :14 px; 
+       }
+
+       /* Responsive Design */
+       @media (max-width: 768px) {
+           header h1 {
+               font-size: 2em; /* Réduction de la taille du texte sur mobile */
+           }
+           form {
+               width :90 % ; /* Formulaire plus large sur mobile */
+           }
        }
     </style>
 </head>
@@ -121,7 +131,7 @@
     <div class="container">
         <p>Nous travaillons dur pour vous apporter nos services. Revenez bientôt !</p>
         
-        <p>Contactez-nous à : <a href="mailto:contact@faya-ia.store" style="color: lightblue;">contact@faya-ia.store</a></p>
+        <p>Contactez-nous à : <a href="mailto:contact@faya-ia.store" style="color:#4CAF50;">contact@faya-ia.store</a></p>
 
         <h2>Formulaire de Contact</h2>
         

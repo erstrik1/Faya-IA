@@ -13,7 +13,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export const sanityConfig: ClientConfig = {
-    projectId: SANITY_PROJECT_ID,
+    projectId: FayaID,
     dataset: SANITY_DATASET || 'production',
     useCdn: false,
     apiVersion: '2024-01-31',
